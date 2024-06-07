@@ -14,7 +14,7 @@ const Home = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const location = useLocation()
-console.log("user",user)
+
   
 
     const fetchUserDetails = async () => {
@@ -33,7 +33,7 @@ console.log("user",user)
                 dispatch(setUser(response.data.data));
             }
         } catch (error) {
-            console.log("Error fetching user details:", error);
+            
             dispatch(logout());
             navigate("/email");
         }
@@ -50,7 +50,7 @@ console.log("user",user)
         },
       })
       socketConnection.on("onlineUser",(data)=>{
-        console.log(data)
+     
         dispatch(setOnlineUser(data))
       })
       dispatch(setSocketConnection(socketConnection))

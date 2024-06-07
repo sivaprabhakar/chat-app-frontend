@@ -24,11 +24,11 @@ const CheckEmail = () => {
 
     const handleSubmit = async (values, { setSubmitting, resetForm }) => {
         try {
-            console.log('Form Values:', values);
+       
 
             // Check the email
             const emailResponse = await axios.post('/api/email', { email: values.email });
-            console.log('Email Response:', emailResponse);
+       
 
             if (emailResponse.data.success) {
                 // Check the password

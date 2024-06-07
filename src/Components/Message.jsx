@@ -115,7 +115,7 @@ const Message = () => {
 
   const handleSendMessage = (e) => {
     e.preventDefault();
-    console.log('Sending message:', message);
+   
     if (message.text || message.imageUrl || message.videoUrl) {
       if (socketConnection) {
         socketConnection.emit('new message', {
