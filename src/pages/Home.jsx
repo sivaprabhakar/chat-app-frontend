@@ -44,7 +44,7 @@ console.log("user",user)
     }, []);
 
     useEffect(()=>{
-      const socketConnection = io("http://localhost:8080",{
+      const socketConnection = io('https://chat-app-backend-9j6j.onrender.com',{
         auth : {
           token : localStorage.getItem('token')
         },

@@ -4,7 +4,7 @@ import { BrowserRouter} from "react-router-dom";
 import { Toaster,toast } from "react-hot-toast";
 import './App.css'
 function App() {
-  axios.defaults.baseURL = 'http://localhost:8080';
+  axios.defaults.baseURL = 'https://chat-app-backend-9j6j.onrender.com';
 
   return (
   <>

@@ -33,7 +33,7 @@ const CheckEmail = () => {
             if (emailResponse.data.success) {
                 // Check the password
                 const passwordResponse = await axios.post('/api/password', { userId: emailResponse.data.data._id, password: values.password });
-                console.log('Password Response:', passwordResponse);
+              
 
                 if (passwordResponse.data.success) {
                     toast.success('Login successful!');
